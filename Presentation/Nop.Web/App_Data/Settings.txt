@@ -1,2 +1,2 @@
 DataProvider: sqlserver
-DataConnectionString: Data Source=ESPLD203;Initial Catalog=ShoppingPortal_NopCommerce;Integrated Security=True;Persist Security Info=False
+DataConnectionString: Data Source=ESPLS002\SQLSERVER;Initial Catalog=absolute_scuba;Integrated Security=False;Persist Security Info=False;User ID=sa;Password=espl@123
