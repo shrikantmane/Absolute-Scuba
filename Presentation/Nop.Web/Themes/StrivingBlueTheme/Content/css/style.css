@@ -846,6 +846,6 @@ a{
 
 @media (min-width: 769px) {
     .item-box:nth-child(3n+1) {
-        clear: inherit;
+        clear: inherit !important;
     }
 }

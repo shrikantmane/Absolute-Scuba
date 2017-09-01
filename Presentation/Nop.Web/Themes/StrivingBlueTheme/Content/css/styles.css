@@ -8211,14 +8211,3 @@ pre {
         font-weight: bold;
     }
 
-
-/*Added by Manish*/
-.featuredBox .item-box {
-    width: auto;
-}
-
-@media (min-width: 769px) {
-    .item-box:nth-child(3n+1) {
-        clear: inherit;
-    }
-}
