@@ -7,6 +7,7 @@
 
 <div class="bodyOverlay"></div>
 
+
 <section class="top-navigation-section">
 
     <!--<label class="top-project-name"><i class="material-icons">shopping_cart</i> Shop<span class="diffText">Easy</span></label> -->
@@ -20,10 +21,20 @@
 
     </div>
 
-    <ul class="topActionBar">
+    @*<ul class="topActionBar">
         <li>
             <a href="">
-                Orders
+                Register
+            </a>
+        </li>
+        <li>
+            <a href="">
+                Login
+            </a>
+        </li>
+        <li>
+            <a href="">
+                Wishlist (0)
             </a>
         </li>
         <li>
@@ -32,12 +43,9 @@
                 <span class="itemCount">10</span>
             </a>
         </li>
-        <li>
-            <a href="">
-                Login <i class="material-icons">account_circle</i>
-            </a>
-        </li>
-    </ul>
+
+    </ul>*@
+    @Html.Action("HeaderLinks", "Common")
 
     <!-- User
     <div class="dropdown top-user-box">

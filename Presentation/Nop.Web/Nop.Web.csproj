@@ -974,6 +974,7 @@
     <Content Include="Scripts\public.common.js" />
     <Content Include="Themes\DefaultClean\Content\css\print.css" />
     <Content Include="Themes\StrivingBlueTheme\Content\css\bootstrap.min.css" />
+    <Content Include="Themes\StrivingBlueTheme\Content\css\CatogiesStyle.css" />
     <Content Include="Themes\StrivingBlueTheme\Content\css\ie8.css" />
     <Content Include="Themes\StrivingBlueTheme\Content\css\print.css" />
     <Content Include="Themes\StrivingBlueTheme\Content\css\style.css" />
