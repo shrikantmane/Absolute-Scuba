@@ -5,7 +5,7 @@
     {
     <li class="dropdown siteDropdown open">
 
-        <a class="filterLink filterLink1 dropdown-toggle" data-toggle="dropdown">
+        <a class="filterLink filterLink1 dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
             @category.Name
             <i class="material-icons arrowDown">keyboard_arrow_down</i><i class="material-icons arrowUp" style="display:none;">keyboard_arrow_up</i>
         </a>
@@ -32,20 +32,16 @@
         }
         if (subCategories.Count > 0)
         {
-            <div class="sublist-toggle"></div>
     <ul class="dropdown-menu siteDropdownMenu @levelClass" role="menu">
-        <div class="">
-            <div class="col-sm-2">
-                <div class="categoryBox">
+        
+            
                     <ul>
                         @foreach (var subCategory in subCategories)
                         {
                             @RenderCategorySubMenu(subCategory, level + 1, responsiveMobileMenu)
                         }
                     </ul>
-                </div>
-            </div>
-        </div>
+            
     </ul>
         }
 }
@@ -83,7 +79,7 @@
             if (subCategories.Count > 0)
             {
                 <div class="sublist-toggle"></div>
-                <ul class="dropdown-menu siteDropdownMenu @levelClass" role="menu">
+                <ul class="dropdown-menu siteDropdownMenu" role="menu">
                     @foreach (var subCategory in subCategories)
                     {
                         @RenderCategoryLine(subCategory, level + 1, responsiveMobileMenu)

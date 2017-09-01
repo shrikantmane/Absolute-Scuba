@@ -474,15 +474,15 @@ body{
     height: 38px;
     padding-left: 40px;
 	box-shadow:none!important;
-	font-family: 'Conv_AVENIRLTSTD-LIGHT';
-	font-size:15px;
+	font-family: Roboto;
+	font-size:14px;
 }
 .searchBox:focus{
 	border-color:#c1c1e2;
 }
 .searchBoxContainer{
 	float: left;
-    width: 50%;
+    width: 45%;
     margin-left: 10em;
     margin-top: 0px;
 }
@@ -490,7 +490,8 @@ body{
 	/*background: #333333;*/
 	background: #aba124;
     padding: 9px 30px;
-    font-family: 'Conv_AVENIRLTSTD-HEAVY';
+    font-family: Roboto;
+    font-weight: 600;
     border: none;
     border-radius: 3px;
     color: #fff;
@@ -514,10 +515,10 @@ body{
 }
 .topActionBar li{
 	display: inline;
-    padding: 0 15px;
+    padding: 0 8px;
 }
 .topActionBar li a{
-	color: #fff;
+	color: #efefef;
     text-decoration: none;
     font-family: Roboto;
     padding: 15px 15px;
@@ -538,7 +539,7 @@ body{
 }
 .itemCount{
 	color: #fff;
-    background: #424140;
+    background: #8e8b69;
     border-radius: 25px;
     position: absolute;
     height: 19px;
@@ -630,9 +631,10 @@ body{
 }
 .featuredBox h4{
 	font-weight:600;
-	font-family: 'Conv_AVENIRLTSTD-HEAVY';
+	font-family: Roboto;
 	color:#000;
 	margin-top:0;
+	font-size: 20px;
 }
 .featuredBox{
 	margin-top:15px;
@@ -705,7 +707,7 @@ a{
 .menuBox{
 	padding: 10px 4em;
     padding-top: 80px;
-    background: #232f3e;
+    background: #39485a;
 }
 .dropdownSection {
     text-align: center;
@@ -716,41 +718,47 @@ a{
 }
 .siteDropdown {
     display: inline-block;
+	margin:0 20px;
 }
 
 .siteDropdown .filterLink{
-	font-family: Lato;
+	font-family: Roboto;
     text-decoration: none!important;
     font-size: 13px;
-    color: #fff;
+    color: #dadada;
     cursor: pointer;
-    margin: 0 20px;
     transition: 0.3s all ease-out;
     opacity: 1;
 }
 .siteDropdown .filterLink:hover{
 	opacity:1;
 }
-.siteDropdownMenu{	
-    
+.siteDropdownMenu{	    
 	background-color: #fff;
-    min-height: 200px;
+    min-height: 180px;
     left: 0;
     right: 0;
     margin: 0 auto;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, .2);	
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .2)!important;
+	border:none!important;	
 	padding: 10px!important;
+	border-radius:0!important;
+}
+.siteDropdownMenu li a{
+	font-family: Roboto;
+    font-size: 12px;
+    padding: 4px 4px 4px 8px;
 }
 
-.dropdownSection ul li.dropdown.open {
+/*.dropdownSection ul li.dropdown.open {
   position: static;
 }
 .dropdownSection ul li.dropdown.open .dropdown-menu {
-	left: 0 !important;
-    right: 0 !important;
-    top: 111px !important;
-    width: 100% !important;
-    margin: 0 auto !important;
+	left: 0;
+    right: 0;
+    top: 111px;
+    width: 100%;
+    margin: 0 auto;
     border: none!important;
     border-radius: 0!important;
 }
@@ -758,7 +766,7 @@ a{
 .dropdown-menu > li {
   vertical-align: middle;
 }
-
+*/
 @media screen and (max-width: 767px) {
   .dropdown-menu > li {
     display: block;
@@ -767,7 +775,7 @@ a{
 
 .siteDropdown i{
 	vertical-align:middle;
-	font-size: 20px!important;
+	font-size: 17px!important;
 }
 .categoryBox h5 {
     font-family: Lato;
@@ -795,17 +803,22 @@ a{
 @media (min-width:1201px) and (max-width:1450px){
 	.searchBoxContainer {
 		float: left;
-		width: 45%;
+		width: 40%;
 		margin-left: 6em;
 		margin-top: 0px;
+	}
+	.siteDropdown {
+		margin: 0 12px;
 	}
 }
 @media (min-width:1201px) and (max-width:1300px){
 	.siteDropdown .filterLink {
-        margin: 0 15px;
+        margin: 0;
 	}
 }
 
-.master-wrapper-content{
-    margin-top:10%!Important;
+.sliderSite .item{
+	background-size:cover;
+	background-repeat:no-repeat;
+	height:55vh;
 }
