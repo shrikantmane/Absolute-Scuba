@@ -13,12 +13,9 @@
     <!--<label class="top-project-name"><i class="material-icons">shopping_cart</i> Shop<span class="diffText">Easy</span></label> -->
 
     @Html.Action("Logo", "Common")
-
+    
     <div class="searchBoxContainer">
-        <input type="text" class="form-control searchBox" placeholder="Search products & brands" />
-        <i class="material-icons searchIcon">search</i>
-        <button class="searchBtn">Search</button>
-
+        @Html.Action("SearchBox", "Catalog")
     </div>
 
     @*<ul class="topActionBar">
