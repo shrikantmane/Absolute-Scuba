@@ -23,19 +23,34 @@
     var addtocomparelink = Url.RouteUrl("AddProductToCompare", new { productId = Model.Id });
 }
 
-<a href="">
+<a href="@Url.RouteUrl("Product", new { SeName = Model.SeName })">
     <div class="productBox">
         <div class="featuredImgBox">
             <img alt="@Model.DefaultPictureModel.AlternateText" src="@Model.DefaultPictureModel.ImageUrl" title="@Model.DefaultPictureModel.Title" />
         </div>
         <div class="featuredContentBox">
-            <label class="rateLabel">
-                <i class="fa fa-star rated" aria-hidden="true"></i>
-                <i class="fa fa-star rated" aria-hidden="true"></i>
-                <i class="fa fa-star rated" aria-hidden="true"></i>
-                <i class="fa fa-star rated" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-            </label>
+            @if (Model.ReviewOverviewModel.AllowCustomerReviews)
+            {
+                int ratingPercent = 0;
+                if (Model.ReviewOverviewModel.TotalReviews != 0)
+                {
+                    ratingPercent = ((Model.ReviewOverviewModel.RatingSum * 100) / Model.ReviewOverviewModel.TotalReviews) / 5;
+                }
+                <div class="product-rating-box" title="@string.Format(T("Reviews.TotalReviews").Text, Model.ReviewOverviewModel.TotalReviews)">
+                    <div class="rating">
+                        <div style="width: @(ratingPercent)%">
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @*<label class="rateLabel">
+                    <i class="fa fa-star rated" aria-hidden="true"></i>
+                    <i class="fa fa-star rated" aria-hidden="true"></i>
+                    <i class="fa fa-star rated" aria-hidden="true"></i>
+                    <i class="fa fa-star rated" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </label>*@
             <h5>
                 @Model.Name
             </h5>
