@@ -743,7 +743,6 @@ a{
 	border:none!important;	
 	padding: 10px!important;
 	border-radius:0!important;
-    margin-top: 6px !important;
 }
 .siteDropdownMenu li a{
 	font-family: Roboto;
@@ -851,7 +850,8 @@ a{
     }
 }
 
-<<<<<<< HEAD
+/*Added By Manish Ends*/
+
 /*Chaitanya*/
 .breadcrumb {
     margin: 0 0 15px!important;
@@ -968,7 +968,7 @@ a{
  height:38px!important;
 }
 /*ENd*/
-=======
+
 .product-page-review .inputs label {
     width: auto !important;
 }
@@ -976,4 +976,3 @@ a{
 .label {
     color: #444;
 }
->>>>>>> 0085bfa346f8ce568a04a0faa96a988fc1d6068d
