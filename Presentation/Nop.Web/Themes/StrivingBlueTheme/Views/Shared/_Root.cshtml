@@ -22,6 +22,18 @@
             </div>
         </section>
     </div>
+    @{
+        var controllerName = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+        var actionName = HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString();
+        var isHomePage = false;
+        if (controllerName == "Home" && actionName == "Index")
+        {
+            isHomePage = true;
+        }
+    }
+    @if (isHomePage) { 
+        @Html.Widget("home_page_top") @*To make slider of of the main content*@
+    }
     <div class="master-wrapper-content">
         <section class="mainContent">
             <div class="rightMainBox">
