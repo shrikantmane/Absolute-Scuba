@@ -58,7 +58,7 @@
 }
 /*****************************************************************/
 body{
-	font-family: 'Conv_AVENIRLTSTD-LIGHT';
+	font-family:Roboto!important;
 	background:#F7F7F7;
 }
 .top-navigation-section{
@@ -567,7 +567,7 @@ body{
 .categoriesBox h4{
 	font-size: 15px;
 	margin-top:0;
-	font-family:Lato;
+	font-family:Roboto;
 	padding: 15px 0 0 15px;
 }
 .categoriesBox h4 span{
@@ -604,7 +604,7 @@ body{
 .masterDropdown a{
 	width:100%;
 	display:block;	
-	font-family:Lato;
+	font-family:Roboto;
 	color:grey;
 	font-size: 12px;
 }
@@ -660,7 +660,7 @@ a{
 }
 .featuredContentBox h4{
 	font-weight:500;
-	font-family: Lato;
+	font-family: Roboto;
 	color:#000;
 	margin-top:20px;
 	font-size:18px;
@@ -668,7 +668,7 @@ a{
 }
 .featuredContentBox h5{
 	font-weight:400;
-	font-family: Lato;
+	font-family: Roboto;
 	color:grey;
 	margin-top:0;
 	font-size:13px;
@@ -778,7 +778,7 @@ a{
 	font-size: 17px!important;
 }
 .categoryBox h5 {
-    font-family: Lato;
+    font-family: Roboto;
     text-decoration: none!important;
     font-size: 14px;
     color: #212121;
@@ -790,7 +790,7 @@ a{
 	list-style-type:none!important;
 }
 .categoryBox ul li a{
-	font-family: Lato;
+	font-family: Roboto;
     text-decoration: none!important;
     font-size: 12px;
     color: #636363;
