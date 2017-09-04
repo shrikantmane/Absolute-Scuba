@@ -427,23 +427,35 @@ namespace Nop.Web.Controllers
         [NopHttpsRequirement(SslRequirement.No)]
         public virtual ActionResult ProductReviews(int productId)
         {
-            var product = _productService.GetProductById(productId);
-            if (product == null || product.Deleted || !product.Published || !product.AllowCustomerReviews)
+            ProductReviewsModel model = GetProductReviews(productId);
+            if (model == null)
                 return RedirectToRoute("HomePage");
+            //var product = _productService.GetProductById(productId);
+            //if (product == null || product.Deleted || !product.Published || !product.AllowCustomerReviews)
+            //    return RedirectToRoute("HomePage");
 
-            var model = new ProductReviewsModel();
-            model = _productModelFactory.PrepareProductReviewsModel(model, product);
-            //only registered users can leave reviews
-            if (_workContext.CurrentCustomer.IsGuest() && !_catalogSettings.AllowAnonymousUsersToReviewProduct)
-                ModelState.AddModelError("", _localizationService.GetResource("Reviews.OnlyRegisteredUsersCanWriteReviews"));
+            //var model = new ProductReviewsModel();
+            //model = _productModelFactory.PrepareProductReviewsModel(model, product);
+            ////only registered users can leave reviews
+            //if (_workContext.CurrentCustomer.IsGuest() && !_catalogSettings.AllowAnonymousUsersToReviewProduct)
+            //    ModelState.AddModelError("", _localizationService.GetResource("Reviews.OnlyRegisteredUsersCanWriteReviews"));
 
-            if (_catalogSettings.ProductReviewPossibleOnlyAfterPurchasing &&
-                !_orderService.SearchOrders(customerId: _workContext.CurrentCustomer.Id, productId: productId, osIds: new List<int> { (int)OrderStatus.Complete }).Any())
-                    ModelState.AddModelError(string.Empty, _localizationService.GetResource("Reviews.ProductReviewPossibleOnlyAfterPurchasing"));
-            
-            //default value
-            model.AddProductReview.Rating = _catalogSettings.DefaultProductRatingValue;
+            //if (_catalogSettings.ProductReviewPossibleOnlyAfterPurchasing &&
+            //    !_orderService.SearchOrders(customerId: _workContext.CurrentCustomer.Id, productId: productId, osIds: new List<int> { (int)OrderStatus.Complete }).Any())
+            //    ModelState.AddModelError(string.Empty, _localizationService.GetResource("Reviews.ProductReviewPossibleOnlyAfterPurchasing"));
+
+            ////default value
+            //model.AddProductReview.Rating = _catalogSettings.DefaultProductRatingValue;
             return View(model);
+        }
+
+        [NopHttpsRequirement(SslRequirement.No)]
+        public virtual ActionResult ProductDetailReviews(int productId)
+        {
+            ProductReviewsModel model = GetProductReviews(productId);
+            if (model == null)
+                return RedirectToRoute("HomePage");
+            return PartialView(model);
         }
 
         [HttpPost, ActionName("ProductReviews")]
@@ -467,9 +479,9 @@ namespace Nop.Web.Controllers
                 ModelState.AddModelError("", _localizationService.GetResource("Reviews.OnlyRegisteredUsersCanWriteReviews"));
             }
 
-            if (_catalogSettings.ProductReviewPossibleOnlyAfterPurchasing && 
+            if (_catalogSettings.ProductReviewPossibleOnlyAfterPurchasing &&
                 !_orderService.SearchOrders(customerId: _workContext.CurrentCustomer.Id, productId: productId, osIds: new List<int> { (int)OrderStatus.Complete }).Any())
-                    ModelState.AddModelError(string.Empty, _localizationService.GetResource("Reviews.ProductReviewPossibleOnlyAfterPurchasing"));
+                ModelState.AddModelError(string.Empty, _localizationService.GetResource("Reviews.ProductReviewPossibleOnlyAfterPurchasing"));
 
             if (ModelState.IsValid)
             {
@@ -640,7 +652,7 @@ namespace Nop.Web.Controllers
             {
                 ModelState.AddModelError("", _localizationService.GetResource("Products.EmailAFriend.OnlyRegisteredUsers"));
             }
-            
+
             if (ModelState.IsValid)
             {
                 //email
@@ -747,6 +759,30 @@ namespace Nop.Web.Controllers
             return RedirectToRoute("CompareProducts");
         }
 
-        #endregion 
+        #endregion
+
+        #region private methods
+        private ProductReviewsModel GetProductReviews(int productId)
+        {
+            var product = _productService.GetProductById(productId);
+            if (product == null || product.Deleted || !product.Published || !product.AllowCustomerReviews)
+                return null;
+
+            var model = new ProductReviewsModel();
+            model = _productModelFactory.PrepareProductReviewsModel(model, product);
+            //only registered users can leave reviews
+            if (_workContext.CurrentCustomer.IsGuest() && !_catalogSettings.AllowAnonymousUsersToReviewProduct)
+                ModelState.AddModelError("", _localizationService.GetResource("Reviews.OnlyRegisteredUsersCanWriteReviews"));
+
+            if (_catalogSettings.ProductReviewPossibleOnlyAfterPurchasing &&
+                !_orderService.SearchOrders(customerId: _workContext.CurrentCustomer.Id, productId: productId, osIds: new List<int> { (int)OrderStatus.Complete }).Any())
+                ModelState.AddModelError(string.Empty, _localizationService.GetResource("Reviews.ProductReviewPossibleOnlyAfterPurchasing"));
+
+            //default value
+            model.AddProductReview.Rating = _catalogSettings.DefaultProductRatingValue;
+            return model;
+        }
+        #endregion private methods
+
     }
 }

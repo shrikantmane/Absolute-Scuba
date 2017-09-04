@@ -849,3 +849,11 @@ a{
         clear: inherit !important;
     }
 }
+
+.product-page-review .inputs label {
+    width: auto !important;
+}
+
+.label {
+    color: #444;
+}
