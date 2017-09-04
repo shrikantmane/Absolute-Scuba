@@ -967,6 +967,7 @@ a{
 .searchBox{
  height:38px!important;
 }
+
 /*ENd*/
 
 .product-page-review .inputs label {
@@ -986,12 +987,12 @@ a{
     color: #444;
 }
 
-.box-border-shadow {
+/*.box-border-shadow {
     line-height: 24px !important;
     border: 1px solid #dacdcd !important;
     padding: 20px 20px 20px 20px !important;
     box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
-}
+}*/
 
 /*CSS for description page stars*/
 .overview .product-name {
@@ -1026,4 +1027,71 @@ a{
 /*CSS for description page ends*/
 
 /*Manish CSS ends*/
+
+
+.mainContent {
+    padding-right: 1em !important;
+    padding-left: 1em !important;
+}
+
+.overview .product-name h1 {
+    font-size: 19px !important;
+}
+
+.gallery {
+    float: none !important;
+    width: auto !important;
+}
+
+.overview {
+    float: none !important;
+    width: auto !important;
+}
+
+.overview .add-to-cart-button, .variant-overview .add-to-cart-button {
+    padding: 0 5px !important;
+    font-size: 13px !important;
+}
+
+.overview .button-2, .variant-overview .button-2 {
+    padding: 12px 10px 12px 30px !important;
+    font-size: 13px !important;
+}
+
+.gallery .picture-thumbs .thumb-item {
+    width: 50px  !important;
+    height: 45px  !important;
+}
+
+.full-description.box-border-shadow {
+    line-height: 24px !important;
+    border: none !important;
+    padding: 20px 20px 20px 20px !important;
+    box-shadow: none !important;
+}
+
+.amazon-title {
+        font-size: 16px !important;
+}
+
+.add-to-cart-button {
+    width:74% !important;
+}
+.add-to-cart-panel, .add-to-wishlist, .email-a-friend, .compare-products {
+    width:100% !important;
+}
+
+.overview .button-2, .variant-overview .button-2 {
+    text-align: center !important;
+}
+
+.product-share-button .at-icon-wrapper svg{
+	height: 25px !important;
+    width: 25px  !important;
+}
+
+.product-share-button .at-icon-wrapper{
+	height: 25px !important;
+    width: 25px  !important;
+}
 /*Manish Changes end*/
