@@ -857,3 +857,37 @@ a{
 .label {
     color: #444;
 }
+
+.box-border-shadow {
+    line-height: 24px !important;
+    border: 1px solid #dacdcd !important;
+    padding: 20px 20px 20px 20px !important;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+}
+
+/*CSS for description page stars*/
+.overview .product-name {
+    color: black !important;
+}
+
+.product-review-links {
+    color: #0066c0 !important;
+}
+.product-no-reviews{
+    color: #0066c0 !important;
+}
+
+[class^='price-value-'] {
+    color: #B12704!important;
+}
+
+.overview .add-to-compare-list-button {
+    background-color: #76caf1 !important;
+}
+
+.overview .email-a-friend-button {
+    background-color: #ea9957 !important;
+}
+/*CSS for description page ends*/
+
+/*Manish CSS ends*/
