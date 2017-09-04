@@ -4,7 +4,7 @@
 }
 <div class="page product-reviews-page">
     <div class="page-title amazon-title">
-        <span>@T("Reviews.ProductReviewsFor") <a href="@Url.RouteUrl("Product", new { SeName = Model.ProductSeName })">@Model.ProductName</a></span>
+        <strong>@T("Reviews.ProductReviewsFor") <a href="@Url.RouteUrl("Product", new { SeName = Model.ProductSeName })">@Model.ProductName</a></strong>
     </div>
     <div class="page-body">
         @Html.Widget("productreviews_page_top", Model.ProductId)

@@ -1072,6 +1072,11 @@ a{
 
 .amazon-title {
         font-size: 16px !important;
+        color:black !important;
+}
+
+.amazon-title a {
+        color: #0066c0 !important;
 }
 
 .add-to-cart-button {
@@ -1093,5 +1098,13 @@ a{
 .product-share-button .at-icon-wrapper{
 	height: 25px !important;
     width: 25px  !important;
+}
+
+.gallery {
+    margin-bottom: 0px !important;
+}
+
+.product-review-list .title, #review-form .title {
+    font-size: 16px !important;
 }
 /*Manish Changes end*/
