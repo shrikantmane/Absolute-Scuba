@@ -292,3 +292,40 @@
 .product-list .productBox{
  padding:5px!important;
 }
+
+/******** For Checkout page *******/
+
+.step-title .title {
+    margin-left: 0!important;
+    margin-bottom: 0!important;
+    margin-top: 0!important;
+    padding-top: 10px!important;
+}
+.selector label{
+ margin-bottom: -4px!important;
+}
+.opc .step {
+    margin: 0px 0!important;
+    padding: 15px 15px!important;
+    text-align: center!important;
+    border: 1px solid #f1f1f1!important;
+}
+.cart th, .data-table th, .forum-table th {
+    border-width: 0px 0px 0!important;
+ font-weight: 700!important;
+    font-family: Roboto!important;
+ padding: 10px 20px!important;
+}
+.cart td, .data-table td, .forum-table td {   
+    border:none !important;
+    border-bottom: 1px solid #ddd!important;
+}
+.searchBtn {
+    background: #FEBD69 !important;
+    padding: 8px 18px 0px 18px !important;
+    float: none !important;
+    color: #111 !important;
+    margin-top: 0 !important;
+    position: absolute !important;
+    margin-left: -58px !important;
+}

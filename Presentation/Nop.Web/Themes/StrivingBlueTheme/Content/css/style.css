@@ -976,3 +976,97 @@ a{
 .label {
     color: #444;
 }
+
+
+
+/*** 4 Sep 2017***/
+.selectCategory{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+ 
+ background:#F3F3F3!important;
+ border: 1px solid #ccc;
+ cursor:pointer;
+ margin-top: 2px;
+    height: 38px;
+ outline:none;
+ padding-left: 5px;
+ font-size:13px; 
+}
+.selectCategory:hover{
+ background-color: #dadada!important;
+    border-left-color: #dadada;
+    border-top-color: #dadada;
+    border-bottom-color: #dadada;
+}
+.selectCategory option{
+ background-color: #fff!important;
+}
+.selectCategoryBox{
+ width: 50px;
+ position: relative;
+    margin-top: -38px;
+    height: 40px;
+ display: inline-block;
+}
+#resizing_select {
+  width: 50px;
+}  
+#width_tmp_select{
+  display : none;
+} 
+.searchBtn:hover {
+    background-color: #f3a847!important;
+}
+.selectCategoryInput{ 
+ display: inline-block;
+ margin-left: -4px;
+ font-size:13px;
+ /*width: 75%;*/
+ width: 86%;
+}
+.searchBox{
+ outline:none;
+ border: 1px solid #dadada;
+ padding-left: 20px!important;
+ font-size: 13px!important;
+}
+.searchBox:focus {
+    border: 1px solid #dadada;
+}
+.searchBtn {
+ /*float:none;
+ margin-top:0;
+ position:absolute;
+ margin-left: 0;*/
+ 
+ float: none;
+    margin-top: 0;
+    position: absolute;
+    margin-left: -58px;
+}
+.topActionBar li a {
+    font-size: 12px;
+ padding: 10px 10px;
+}
+.topActionBar li a i {
+    font-size: 20px;
+}
+.topActionBar li {
+    display: inline;
+    padding: 0 2px;
+}
+.searchBoxContainer {
+    float: left;
+    width: 55%; 
+}
+@media (max-width: 1450px) and (min-width: 1201px){
+ .searchBoxContainer {
+  width: 52%; 
+ }
+}
+@media (max-width: 1450px) and (min-width: 1201px){
+ .searchBoxContainer {  
+  margin-left: 4em;
+ }
+}
