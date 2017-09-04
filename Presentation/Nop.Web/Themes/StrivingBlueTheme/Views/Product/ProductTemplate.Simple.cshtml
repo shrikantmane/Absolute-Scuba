@@ -138,6 +138,10 @@
                             @Html.Raw(Model.FullDescription)
                         </div>
                     }
+                    
+                    <div id="product-reviews">
+                        @Html.Action("ProductDetailReviews", "Product", new { productId = Model.Id })
+                    </div>
                 </div>
                 @Html.Widget("productdetails_before_collateral", Model.Id)
                 <div class="product-collateral">
@@ -146,7 +150,9 @@
                 </div>
                 @Html.Action("ProductsAlsoPurchased", "Product", new { productId = Model.Id })
                 @Html.Action("RelatedProducts", "Product", new { productId = Model.Id })
+                
             </div>
+            
         }
         @Html.Widget("productdetails_bottom", Model.Id)
     </div>
