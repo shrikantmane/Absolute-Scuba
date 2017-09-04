@@ -1,0 +1,8 @@
+﻿@model LogoModel
+@using Nop.Web.Models.Common;
+@*<a href="@Url.RouteUrl("HomePage")">
+    <img title="" alt="@Model.StoreName" src="@Model.LogoPath">
+</a>*@
+<a href="@Url.RouteUrl("HomePage")">
+    <img src="@Model.LogoPath" class="logoImg" />
+</a>

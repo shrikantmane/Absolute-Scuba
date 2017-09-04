@@ -1,0 +1,88 @@
+﻿<!-- Floating Action Button -->
+<div class="fixed-action-button" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large">
+        <i class="material-icons">clear_all</i>
+    </a>
+</div>
+
+<div class="bodyOverlay"></div>
+
+
+<section class="top-navigation-section">
+
+    <!--<label class="top-project-name"><i class="material-icons">shopping_cart</i> Shop<span class="diffText">Easy</span></label> -->
+
+    @Html.Action("Logo", "Common")
+    
+    <div class="searchBoxContainer">
+        @Html.Action("SearchBox", "Catalog")
+    </div>
+
+    @*<ul class="topActionBar">
+        <li>
+            <a href="">
+                Register
+            </a>
+        </li>
+        <li>
+            <a href="">
+                Login
+            </a>
+        </li>
+        <li>
+            <a href="">
+                Wishlist (0)
+            </a>
+        </li>
+        <li>
+            <a href="">
+                My Cart <i class="material-icons">shopping_cart</i>
+                <span class="itemCount">10</span>
+            </a>
+        </li>
+
+    </ul>*@
+    @Html.Action("HeaderLinks", "Common")
+
+    <!-- User
+    <div class="dropdown top-user-box">
+        <img src="img/user.jpg" class="top-user-image dropdown-toggle toggle-icon wave-button" data-toggle="dropdown"/>
+        <span class="onlineStatus"></span>
+        <span class="top-user-name">Carol Danvers </span>
+
+        <img src="img/edit profile.png" />
+
+        <ul class="dropdown-menu site-dropdown user-dropdown">
+            <li><a href="#" class="wave-button"><i class="material-icons">person</i> View Profile</a></li>
+            <li><a href="#" class="wave-button"><i class="material-icons">settings</i> Settings</a></li>
+            <li><a href="#" class="wave-button"><i class="material-icons">power_settings_new</i> Logout</a></li>
+        </ul>
+    </div>	 -->
+
+</section>
+
+@*
+<div class="header">
+        @Html.Widget("header")
+        <div class="header-upper">
+            <div class="header-selectors-wrapper">
+                @Html.Action("TaxTypeSelector", "Common")
+                @Html.Action("CurrencySelector", "Common")
+                @Html.Action("LanguageSelector", "Common")
+                @Html.Widget("header_selectors")
+            </div>
+            <div class="header-links-wrapper">
+                @Html.Action("HeaderLinks", "Common")
+                @Html.Action("FlyoutShoppingCart", "ShoppingCart")
+            </div>
+        </div>
+        <div class="header-lower">
+            <div class="header-logo">
+                @Html.Action("Logo", "Common")
+            </div>
+            <div class="search-box store-search-box">
+                @Html.Action("SearchBox", "Catalog")
+            </div>
+        </div>
+    </div>
+*@
