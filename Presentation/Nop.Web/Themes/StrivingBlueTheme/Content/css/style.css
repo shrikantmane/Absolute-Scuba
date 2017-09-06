@@ -1116,4 +1116,11 @@ a{
     background-image: url(../images/addOneToCart.png);
     /* background-color: #ea9957; */
 }
+
+.overview .label {
+    font-size: 100% !important;
+}
+.overview .billing-address-section, .variant-overview .billing-address-section {
+    margin: 0 0 20px;
+}
 /*Manish Changes end*/
