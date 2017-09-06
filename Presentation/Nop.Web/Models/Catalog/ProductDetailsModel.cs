@@ -6,6 +6,7 @@ using Nop.Core.Domain.Orders;
 using Nop.Web.Framework;
 using Nop.Web.Framework.Mvc;
 using Nop.Web.Models.Media;
+using Nop.Core.Domain.Common;
 
 namespace Nop.Web.Models.Catalog
 {
@@ -28,6 +29,9 @@ namespace Nop.Web.Models.Catalog
             ProductReviewOverview = new ProductReviewOverviewModel();
             TierPrices = new List<TierPriceModel>();
         }
+
+        //added by manish to show address
+        public Address BillingAddress { get; set; }
 
         //picture(s)
         public bool DefaultPictureZoomEnabled { get; set; }

@@ -1107,4 +1107,13 @@ a{
 .product-review-list .title, #review-form .title {
     font-size: 16px !important;
 }
+
+.buy-button {
+    background-color: #ea9957 !important;
+}
+
+.overview .buy-button, .variant-overview .buy-button {
+    background-image: url(../images/addOneToCart.png);
+    /* background-color: #ea9957; */
+}
 /*Manish Changes end*/
