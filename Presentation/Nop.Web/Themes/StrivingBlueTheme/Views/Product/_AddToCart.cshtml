@@ -49,28 +49,60 @@
                     </script>
                 }
                 @{
-                    var addToCartText = "";
-                    if (Model.UpdatedShoppingCartItemId > 0 && Model.UpdateShoppingCartItemType.HasValue && Model.UpdateShoppingCartItemType.Value == ShoppingCartType.ShoppingCart)
+                var addToCartText = "";
+                if (Model.UpdatedShoppingCartItemId > 0 && Model.UpdateShoppingCartItemType.HasValue && Model.UpdateShoppingCartItemType.Value == ShoppingCartType.ShoppingCart)
+                {
+                    addToCartText = T("ShoppingCart.AddToCart.Update").Text;
+                }
+                else
+                {
+                    addToCartText = T("ShoppingCart.AddToCart").Text;
+                    if (Model.IsRental)
                     {
-                        addToCartText = T("ShoppingCart.AddToCart.Update").Text;
+                        addToCartText = T("ShoppingCart.Rent").Text;
                     }
-                    else
+                    if (Model.AvailableForPreOrder)
                     {
-                        addToCartText = T("ShoppingCart.AddToCart").Text;
-                        if (Model.IsRental)
-                        {
-                            addToCartText = T("ShoppingCart.Rent").Text;
-                        }
-                        if (Model.AvailableForPreOrder)
-                        {
-                            addToCartText = T("ShoppingCart.PreOrder").Text;
-                        }
+                        addToCartText = T("ShoppingCart.PreOrder").Text;
                     }
-                    <!--<input type="button" id="add-to-cart-button-@Model.ProductId" class="button-1 add-to-cart-button" value="@addToCartText" data-productid="@Model.ProductId" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = Model.ProductId, shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart })', '#product-details-form');return false;" />-->
-                    <button id="add-to-cart-button-@Model.ProductId" class="button-1 add-to-cart-button" data-productid="@Model.ProductId" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = Model.ProductId, shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart })', '#product-details-form');return false;" >@addToCartText</button>
+                }
+                @*<input type="button" id="add-to-cart-button-@Model.ProductId" class="button-1 add-to-cart-button" value="@addToCartText" data-productid="@Model.ProductId" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = Model.ProductId, shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart })', '#product-details-form');return false;" />*@
+                <button id="add-to-cart-button-@Model.ProductId" class="button-1 add-to-cart-button" data-productid="@Model.ProductId" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = Model.ProductId, shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart })', '#product-details-form');return false;" >@addToCartText</button>
+                }
+            </div>
+            <div class="buy-button-panel">
+                @if (!Model.DisableBuyButton)
+                {
+                    if (!Model.IsRental && !Model.AvailableForPreOrder)
+                    {
+                        <input type="button" id="buy-button-@Model.ProductId" class="button-2 buy-button" value="Buy Now" data-productid="@Model.ProductId" onclick="buyBtnClick('@Url.RouteUrl("AddProductToCart-Details", new { productId = Model.ProductId, shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart })', '#product-details-form'); return false;" />
+                    }
                 }
             </div>
         }
         @Html.Widget("productdetails_add_info", Model.ProductId)
     </div>
+
+    <script type="text/javascript">
+        function buyBtnClick(urladd, formselector) {
+            if (AjaxCart.loadWaiting != false) {
+                return;
+            }
+            AjaxCart.setLoadWaiting(true);
+
+            $.ajax({
+                cache: false,
+                url: urladd,
+                data: $(formselector).serialize(),
+                type: 'post',
+                success: redirectBuyPage,
+                complete: AjaxCart.resetLoadWaiting,
+                error: AjaxCart.ajaxFailure
+            });
+        }
+
+        function redirectBuyPage() {
+            location.href = "/cart";
+        }
+    </script>
 }

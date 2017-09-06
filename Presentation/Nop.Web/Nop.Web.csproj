@@ -990,6 +990,7 @@
     <Content Include="Themes\StrivingBlueTheme\Content\fonts\AVENIRLTSTD-LIGHT.svg" />
     <Content Include="Themes\StrivingBlueTheme\Content\fonts\AVENIRLTSTD-LIGHTOBLIQUE.svg" />
     <Content Include="Themes\StrivingBlueTheme\Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Themes\StrivingBlueTheme\Content\images\addOneToCart.png" />
     <Content Include="Themes\StrivingBlueTheme\Content\images\ajax-loader-small.gif" />
     <Content Include="Themes\StrivingBlueTheme\Content\images\back-button.png" />
     <Content Include="Themes\StrivingBlueTheme\Content\images\calendar-next.png" />

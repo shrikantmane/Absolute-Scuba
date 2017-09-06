@@ -25,6 +25,7 @@ using Nop.Web.Framework.Security;
 using Nop.Web.Framework.Security.Captcha;
 using Nop.Web.Infrastructure.Cache;
 using Nop.Web.Models.Catalog;
+using Nop.Services.Customers;
 
 namespace Nop.Web.Controllers
 {
@@ -53,6 +54,7 @@ namespace Nop.Web.Controllers
         private readonly LocalizationSettings _localizationSettings;
         private readonly CaptchaSettings _captchaSettings;
         private readonly ICacheManager _cacheManager;
+        private readonly ICustomerService _customerservice;
 
         #endregion
 
@@ -78,7 +80,8 @@ namespace Nop.Web.Controllers
             ShoppingCartSettings shoppingCartSettings,
             LocalizationSettings localizationSettings,
             CaptchaSettings captchaSettings,
-            ICacheManager cacheManager)
+            ICacheManager cacheManager,
+            ICustomerService customerservice)
         {
             this._productModelFactory = productModelFactory;
             this._productService = productService;
@@ -101,6 +104,7 @@ namespace Nop.Web.Controllers
             this._localizationSettings = localizationSettings;
             this._captchaSettings = captchaSettings;
             this._cacheManager = cacheManager;
+            this._customerservice = customerservice;
         }
 
         #endregion
@@ -111,6 +115,7 @@ namespace Nop.Web.Controllers
         public virtual ActionResult ProductDetails(int productId, int updatecartitemid = 0)
         {
             var product = _productService.GetProductById(productId);
+
             if (product == null || product.Deleted)
                 return InvokeHttp404();
 

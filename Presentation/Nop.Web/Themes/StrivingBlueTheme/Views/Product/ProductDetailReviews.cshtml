@@ -3,8 +3,8 @@
 @{
 }
 <div class="page product-reviews-page">
-    <div class="page-title">
-        <h1>@T("Reviews.ProductReviewsFor") <a href="@Url.RouteUrl("Product", new { SeName = Model.ProductSeName })">@Model.ProductName</a></h1>
+    <div class="page-title amazon-title">
+        <strong>@T("Reviews.ProductReviewsFor") <a href="@Url.RouteUrl("Product", new { SeName = Model.ProductSeName })">@Model.ProductName</a></strong>
     </div>
     <div class="page-body">
         @Html.Widget("productreviews_page_top", Model.ProductId)
@@ -13,7 +13,7 @@
             <div class="col-md-6">
                 @if (Model.Items.Count > 0)
                 {
-                    <div class="product-review-list">
+                    <div class="product-review-list box-border-shadow">
                         <div class="title">
                             <strong>@T("Reviews.ExistingReviews")</strong>
                         </div>
@@ -82,7 +82,7 @@
                 }
                 else
                 {
-                    <div class="write-review" id="review-form">
+                    <div class="write-review box-border-shadow" id="review-form">
                         <div class="title">
                             <strong>@T("Reviews.Write")</strong>
                         </div>
