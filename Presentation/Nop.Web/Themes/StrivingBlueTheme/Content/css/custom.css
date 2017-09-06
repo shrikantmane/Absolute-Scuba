@@ -329,3 +329,9 @@
     position: absolute !important;
     margin-left: -58px !important;
 }
+.item-box .product-box-add-to-cart-button {
+    display: inline-block;
+    height: 40px;
+    border: none;
+    vertical-align: middle;
+}
