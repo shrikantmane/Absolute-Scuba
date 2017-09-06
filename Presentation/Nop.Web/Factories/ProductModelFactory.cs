@@ -1365,7 +1365,11 @@ namespace Nop.Web.Factories
                         model.AssociatedProducts.Add(PrepareProductDetailsModel(associatedProduct, null, true));
                 }
             }
-
+            Customer currentCustomer = _workContext.CurrentCustomer;
+            if (currentCustomer.BillingAddress != null)
+            {
+                model.BillingAddress = currentCustomer.BillingAddress;
+            }
             return model;
         }
 

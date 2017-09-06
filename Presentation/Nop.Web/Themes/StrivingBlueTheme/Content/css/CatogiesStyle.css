@@ -104,10 +104,6 @@
     margin-bottom: 15px!important;
 	font-family:Roboto!important;	
 }
-.sub-category-item:hover{
-	box-shadow: 0 7px 17px 0 rgba(23,84,116,0.18)!important;
-    text-decoration: none!important;
-}
 .category-page .page-title h1 {
     font-size: 26px!important;
     font-weight: 600!important;

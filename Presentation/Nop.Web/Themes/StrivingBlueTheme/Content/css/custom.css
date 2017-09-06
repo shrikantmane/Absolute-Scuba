@@ -1,0 +1,279 @@
+/*footer*/
+
+.footer {
+    background-color: #39485a!important;
+}
+.footer-block .title {    
+    color: #fff!important;
+    font-family:Roboto!important;	
+}
+.footer-block .list a {
+    color: #b5b5b5!important;
+    font-family:Roboto!important;	
+}
+.newsletter-email input[type="text"] {
+    font-family:Roboto!important;	
+}
+.newsletter-email .newsletter-subscribe-button {
+    font-family:Roboto!important;	
+}
+
+/*Breadcrumb styles*/
+
+.breadcrumb {
+    margin: 0 0 50px;
+    background-color: #fff!important;
+    border: 1px solid #f5f5f5!important;
+    padding: 6px 10px!important;
+    border-radius: 5px!important;
+	font-family:Roboto!important;	
+}
+.breadcrumb li * {
+	font-family:Roboto!important;	
+    display: inline-block!important;
+    margin: 0 5px!important;
+    font-size: 13px!important;
+    line-height: 32px!important;
+}
+.breadcrumb li a {
+	color:#232f3e!important;	
+}
+
+
+/*category styles*/
+.block .list a:before {
+	display:none!important;
+}
+.block{
+	font-family:Roboto!important;	
+}
+.block .title {
+	font-family:Roboto!important;	
+	padding-left:0!important;
+	border-bottom: 1px solid #f1f1f1!important;
+	font-size: 15px!important;
+    text-transform: uppercase!important;
+    font-weight: 400!important;
+}
+.block .list a:before {
+    content: ""!important;
+    position: absolute!important;
+    top: 11px!important;
+    left: -15px!important;
+    width: 5px!important;
+    height: 5px!important;
+    background-color: #8a8a8a!important;
+    border-radius: 5px!important;
+}
+.block .list a {    
+    font-size: 15px!important;
+	font-family:Roboto!important;	
+	color: #656464!important;
+}
+.block .sublist {
+    margin: 7px 0 -3px!important;
+	padding-left: 15px!important;
+}
+.block .sublist a {
+    font-size: 13px!important;
+	font-family:Roboto!important;	
+}
+.block .list li {
+    padding: 5px 0 5px 0!important;
+}
+
+
+.page-title {
+    min-height: auto!important;
+    margin: 0 0 25px!important;
+    border-bottom: 1px solid #ddd!important;
+    padding: 6px 0px!important;
+	font-family:Roboto!important;	
+}
+.sub-category-item{
+	padding: 15px!important;
+    min-height: 280px!important;
+	transition:0.3s all ease-out;
+}
+.home-page-category-grid .title a, .sub-category-grid .title a {
+    display: block!important;
+    padding: 0 0 15px!important;
+    font-size: 17px!important;
+    font-weight: 600!important;
+    color: #4a4848!important;
+    margin-bottom: 15px!important;
+	font-family:Roboto!important;	
+}
+.sub-category-item:hover{
+	box-shadow: 0 7px 17px 0 rgba(23,84,116,0.18)!important;
+    text-decoration: none!important;
+}
+.category-page .page-title h1 {
+    font-size: 26px!important;
+    font-weight: 600!important;
+    font-family: Roboto!important;
+}
+
+/**********************************************************/
+
+.breadcrumb {
+    margin: 0 0 15px!important;
+}
+.category-page .page-title h1 {
+    font-size: 20px!important;
+    font-weight: 600!important;
+    font-family: Roboto!important;
+    margin-top: 0px;
+    letter-spacing: 0px;
+}
+.item-box{
+    box-shadow: none!important;
+	margin-bottom:30px!important;
+}
+.item-box:hover {
+    box-shadow: 0 7px 17px 0 rgba(23,84,116,0.18)!important;
+    text-decoration: none!important;
+}
+.breadcrumb ul {
+    font-size: 0;
+    margin-bottom: 0!important;
+}
+.page-title {
+    min-height: auto!important;
+    margin: 0 0 25px!important;
+    border-bottom: 1px solid #f1f1f1!important;
+    padding: 6px 0px!important;
+    font-family: Roboto!important;
+}
+.topic-block {
+    margin: 0 0 25px!important;
+    margin-top: 50px!important;
+}
+.topic-block-title h2 {
+    font-size: 25px!important;
+    font-weight: normal;
+    font-family: Roboto!important;
+    text-align: center;
+    text-transform: uppercase!important;
+    text-rendering: optimizeLegibility;
+    color: #131313!important;
+    letter-spacing: 3px!important;
+}
+.topic-block-title {
+	padding:0!important;
+	border-bottom: 1px solid #f3f3f3!important;
+}
+.topic-block p, .topic-page p, .post-body p, .news-body p {
+    margin: 10px 0!important;
+    text-align: center!important;
+    font-family: Roboto!important;
+    font-weight: 300!important;
+    font-size: 18px!important;
+    letter-spacing: 0px!important;
+    line-height: 1.6em!important;
+}
+.item-grid{
+	margin-top:4em;
+}
+.home-page-category-grid .title a, .sub-category-grid .title a {
+    display: block!important;
+    padding: 0 0 15px!important;
+    font-family: Roboto!important;
+    font-size: 19px!important;
+    color: #000!important;
+    font-weight: 700!important;
+}
+
+/**********************************/
+
+.home-page-category-grid, .sub-category-grid, .manufacturer-grid, .vendor-grid {
+    margin: 0 0 0px;
+}
+.featuredBox {
+    margin-top: 0px;
+	padding: 0 15px;
+}
+.featuredBox h4:first-child {
+    margin-left: -9px;
+}
+.productBox:hover {
+    box-shadow: none!important;
+    text-decoration: none!important;
+}
+.footer-block .title {
+	color: #fff!important;
+	font-family: Roboto!important;
+}
+.footer-lower {
+    color: #fff!important;
+}
+.searchBox{
+	height:38px!important;
+}
+
+/****************************/
+
+.block a.product-picture + a.product-name {
+    width: 70%!important;
+    font-size: 12px!important;
+    margin-left: 5px!important;
+}
+.mainContent {
+    padding: 0px 4em!important;
+}
+.center-2, .side-2 {
+    margin: 0!important;
+}
+.page-title {
+    margin-bottom: 0px!important;
+}
+.item img{
+	height:55vh;
+}
+/******* D. 4 Sep 2017  *******/
+.item-grid {
+    margin-top: 20px!important;
+}
+.home-page-category-grid .title, .sub-category-grid .title {
+    margin-top: 5px!important;
+}
+.home-page-category-grid .title a, .sub-category-grid .title a {
+    display: block!important;
+    padding: 0 0 0px!important;
+    font-family: Roboto!important;
+    font-size: 17px!important;
+    color: #000!important;
+    font-weight: 700!important;
+}
+.item-box .picture a img {
+ width:100%;
+}
+.featuredImgBox {
+    min-height: 250px!important;
+    max-height: auto !important;
+}
+.featuredImgBox img {
+    width: auto!important;
+    height: auto!important;
+    max-width: 270px!important;
+    max-height: 215px!important;
+    vertical-align: middle!important;
+}
+.sub-category-item:hover{
+ box-shadow: none!important;
+    text-decoration: none!important;
+}
+.product-selectors {
+ border:none!important;
+ padding-top: 0px!important;
+}
+
+.cart th, .data-table th, .forum-table th {   
+    background-color: #e8e8e8;
+ font-weight:600;
+}
+.page-title h1 {
+    font-size: 26px!important;
+    font-weight: 600!important;
+    font-family: Roboto!important;
+}
