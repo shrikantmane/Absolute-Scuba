@@ -335,3 +335,41 @@
     border: none;
     vertical-align: middle;
 }
+
+
+/*** D. 14 Sep - Gaurav ****/
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {    
+    height: 35vh!important;
+}
+
+.landingSlider .item img{
+ height:35vh;
+}
+.slidercontent{
+ position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-family: 'Conv_AVENIRLTSTD-HEAVY';    
+    width: 65%;   
+ z-index:10;
+}
+.slidercontent h3{
+ color: #fff;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 18px;
+ font-family: Ubuntu;  
+ font-weight:600;
+}
+.slidercontent p{
+ color:#fff;
+ text-align:center;
+ font-size: 16px;
+ font-family: Ubuntu;  
+ font-weight: 400; 
+}
