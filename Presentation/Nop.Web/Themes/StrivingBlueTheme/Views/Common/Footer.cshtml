@@ -123,6 +123,7 @@
     <br />
     @Html.Widget("footer")
 </div>
+<script src="~/Themes/StrivingBlueTheme/Scripts/jzoom.min.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function () {
@@ -214,5 +215,33 @@
                 }
             }
         });
+
+        // resize select according to the option				
+        var containerWidth = $('.searchBoxContainer').width();
+        var categoryWidth = $('.selectCategoryBox').width();
+
+        var b = $('.searchBtn').width();
+
+        $('.selectCategoryInput').width(containerWidth - categoryWidth - b);
+
+        $('#resizing_select').change(function () {
+            $("#width_tmp_option").html($('#resizing_select option:selected').text());
+            $(this).width($("#width_tmp_select").width());
+            $('.selectCategoryBox').width($("#width_tmp_select").width());
+
+            var containerWidth = $('.searchBoxContainer').width();
+            var categoryWidth = $('.selectCategoryBox').width();
+
+            //alert(containerWidth + " " + categoryWidth + " " + a);
+
+            var b = $('.searchBtn').width();
+
+            $('.selectCategoryInput').width(containerWidth - categoryWidth - b);
+
+        });
+        // resize select according to the option Ends
     });
+</script>
+<script>
+    $('.jzoom').jzoom({ bgColor: "#222" });
 </script>

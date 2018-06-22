@@ -1,0 +1,104 @@
+﻿@model SearchModel
+@using Nop.Web.Models.Catalog;
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#@Html.FieldIdFor(model => model.adv)").click(toggleAdvancedSearch);
+
+        toggleAdvancedSearch();
+    });
+
+    function toggleAdvancedSearch() {
+
+        if ($('#@Html.FieldIdFor(model => model.adv)').is(':checked')) {
+            $('#advanced-search-block').show();
+        }
+        else {
+            $('#advanced-search-block').hide();
+        }
+    }
+</script>
+            @using (Html.BeginRouteForm("ProductSearch", FormMethod.Get))
+            {
+               
+                        if (Model.AvailableCategories.Count > 0)
+{
+                                <div class="selectCategoryBox">
+                                    @*@Html.LabelFor(model => model.cid, new { }, ":")*@
+                                    @Html.DropDownListFor(model => model.cid, Model.AvailableCategories, new { @id = "resizing_select", @class = "selectCategory" })
+                                    <select id="width_tmp_select">
+                                        <option id="width_tmp_option"></option>
+                                    </select>
+                                </div>
+                                
+                            }
+
+                           
+                            
+                            @Html.Widget("productsearch_page_advanced")
+                           
+                                <div class="selectCategoryInput">
+                                    @Html.TextBoxFor(model => model.q, new { @class = "searchBox", @id = "small-searchterms" })
+                                </div>
+                            @Html.Widget("productsearch_page_basic")
+                            <div class="inputs reversed" style="display:none;">
+                                @Html.CheckBoxFor(model => model.adv)
+                                @Html.LabelFor(model => model.adv, new { @checked = "checked" })
+                                @Html.CheckBoxFor(model => model.isc, new { @checked = "checked" })
+                                @Html.LabelFor(model => model.isc)
+                            </div>
+                            
+                            @*    @Html.CheckBoxFor(model => model.adv)
+                                @Html.LabelFor(model => model.adv)*@
+                            
+                       
+                        
+                 <button class="searchBtn"><i class="material-icons">search</i></button>   
+                @*<div class="buttons">
+                    <input type="submit" class="button-1 search-button" value="@T("Search.Button")" />
+                </div>*@
+            }
+       @* 
+        @if (Model.Products.Count > 0)
+        {
+            @Html.Partial("_CatalogSelectors", Model.PagingFilteringContext, new ViewDataDictionary())
+        }
+        @Html.Widget("productsearch_page_before_results")
+        <div class="search-results">
+            @if (!String.IsNullOrEmpty(Model.Warning))
+            {
+                <div class="warning">
+                    @Model.Warning
+                </div>
+            }
+            @if (Model.NoResults)
+            {
+                <div class="no-result">
+                    @T("Search.NoResultsText")
+                </div>
+            }
+
+            @if (Model.Products.Count > 0)
+            {
+                <div class="@(Model.PagingFilteringContext.ViewMode == "list" ? "product-list" : "product-grid")">
+                    <div class="item-grid">
+                        @foreach (var product in Model.Products)
+                        {
+                            <div class="item-box">
+                                @Html.Partial("_ProductBox", product)
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+            @{
+                var pager = Html.Pager(Model.PagingFilteringContext).QueryParam("pagenumber").BooleanParameterName("adv").BooleanParameterName("isc").BooleanParameterName("sid").RenderEmptyParameters(true);
+            }
+            @if (!pager.IsEmpty())
+            {
+                <div class="pager">
+                    @pager
+                </div>
+            }
+        </div> *@
+        @Html.Widget("productsearch_page_after_results")

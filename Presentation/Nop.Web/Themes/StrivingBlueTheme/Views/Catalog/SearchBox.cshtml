@@ -5,12 +5,29 @@
     
         
 				
-				
-
-    <input type="text" class="form-control searchBox" id="small-searchterms" autocomplete="off" name="q" placeholder="@T("Search.SearchBox.Tooltip")" />
-    <i class="material-icons searchIcon">search</i>
+		<div class="selectCategoryBox">					
+					<select id="resizing_select" class="selectCategory">
+						<option>All</option>
+						<option>Underwater Electronics</option>
+						<option>Scuba</option>
+						<option>Divewear</option>
+						<option>Spearfishing</option>
+						<option>FreeDiving</option>
+						<option>Bags</option>
+						<option>Accessories</option>
+						<option>Other Gears</option>
+					</select>
+					<select id="width_tmp_select">
+					  <option id="width_tmp_option"></option>
+					</select>					
+				</div>		
+    <div class="selectCategoryInput">
+        <input type="text" class="searchBox" id="small-searchterms" autocomplete="off" name="q" placeholder="@T("Search.SearchBox.Tooltip")" />
+        </div>
+    
     @Html.Widget("searchbox_before_search_button")
-    <input type="submit" class="searchBtn" value="@T("Search.Button")" />
+    <button class="searchBtn"><i class="material-icons">search</i></button>
+    @*<input type="submit" class="searchBtn" value="@T("Search.Button")" />*@
     if (Model.SearchTermMinimumLength > 0)
     {
         <script type="text/javascript">

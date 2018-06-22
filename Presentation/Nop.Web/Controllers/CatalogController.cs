@@ -333,6 +333,22 @@ namespace Nop.Web.Controllers
             return PartialView(model);
         }
 
+        [ChildActionOnly]
+        public virtual ActionResult CustomSearch(SearchModel model, CatalogPagingFilteringModel command)
+        {
+            //'Continue shopping' URL
+            _genericAttributeService.SaveAttribute(_workContext.CurrentCustomer,
+                SystemCustomerAttributeNames.LastContinueShoppingPage,
+                _webHelper.GetThisPageUrl(false),
+                _storeContext.CurrentStore.Id);
+
+            if (model == null)
+                model = new SearchModel();
+
+            model = _catalogModelFactory.PrepareSearchModel(model, command);
+            return PartialView(model);
+        }
+
         [ValidateInput(false)]
         public virtual ActionResult SearchTermAutoComplete(string term)
         {

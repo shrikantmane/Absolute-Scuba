@@ -45,6 +45,39 @@
                         @Html.ValidationMessageFor(model => model.Link1)
                     </div>
                 </div>
+                @*For drop down*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Select1_OverrideForStore, model => model.Select1, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Select1)
+                    </div>
+                    <div class="col-md-9">                                          
+                        @Html.NopDropDownListFor(model => model.Select1, Model.SlideCategories, new { @disabled = "disabled" })                        
+                        @Html.ValidationMessageFor(model => model.Select1)
+                    </div>
+                </div>
+                @*For Heading*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Heading1_OverrideForStore, model => model.Heading1, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Heading1)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Heading1)
+                        @Html.ValidationMessageFor(model => model.Heading1)
+                    </div>
+                </div>
+                @*For Sub Heading*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.SubHeading1_OverrideForStore, model => model.SubHeading1, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.SubHeading1)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.SubHeading1)
+                        @Html.ValidationMessageFor(model => model.SubHeading1)
+                    </div>
+                </div>
             </div>
         </div>
         <div class="panel panel-default">
@@ -80,6 +113,39 @@
                     <div class="col-md-9">
                         @Html.NopEditorFor(model => model.Link2)
                         @Html.ValidationMessageFor(model => model.Link2)
+                    </div>
+                </div>
+                @*For drop down*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Select2_OverrideForStore, model => model.Select2, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Select2)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopDropDownListFor(model => model.Select2, Model.SlideCategories, new { @disabled = "disabled" })
+                        @Html.ValidationMessageFor(model => model.Select2)
+                    </div>
+                </div>
+                @*For Heading*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Heading2_OverrideForStore, model => model.Heading2, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Heading2)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Heading2)
+                        @Html.ValidationMessageFor(model => model.Heading2)
+                    </div>
+                </div>
+                @*For Sub Heading*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.SubHeading2_OverrideForStore, model => model.SubHeading2, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.SubHeading2)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.SubHeading2)
+                        @Html.ValidationMessageFor(model => model.SubHeading2)
                     </div>
                 </div>
             </div>
@@ -119,6 +185,39 @@
                         @Html.ValidationMessageFor(model => model.Link3)
                     </div>
                 </div>
+                @*For drop down*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Select3_OverrideForStore, model => model.Select3, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Select3)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopDropDownListFor(model => model.Select3, Model.SlideCategories, new { @disabled = "disabled" })
+                        @Html.ValidationMessageFor(model => model.Select3)
+                    </div>
+                </div>
+                @*For Heading*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Heading3_OverrideForStore, model => model.Heading3, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Heading3)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Heading3)
+                        @Html.ValidationMessageFor(model => model.Heading3)
+                    </div>
+                </div>
+                @*For Sub Heading*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.SubHeading3_OverrideForStore, model => model.SubHeading3, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.SubHeading3)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.SubHeading3)
+                        @Html.ValidationMessageFor(model => model.SubHeading3)
+                    </div>
+                </div>
             </div>
         </div>
         <div class="panel panel-default">
@@ -156,6 +255,39 @@
                         @Html.ValidationMessageFor(model => model.Link4)
                     </div>
                 </div>
+                @*For drop down*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Select4_OverrideForStore, model => model.Select4, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Select4)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopDropDownListFor(model => model.Select4, Model.SlideCategories, new { @disabled = "disabled" })
+                        @Html.ValidationMessageFor(model => model.Select4)
+                    </div>
+                </div>
+                @*For Heading*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Heading4_OverrideForStore, model => model.Heading4, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Heading4)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Heading4)
+                        @Html.ValidationMessageFor(model => model.Heading4)
+                    </div>
+                </div>
+                @*For Sub Heading*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.SubHeading4_OverrideForStore, model => model.SubHeading4, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.SubHeading4)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.SubHeading4)
+                        @Html.ValidationMessageFor(model => model.SubHeading4)
+                    </div>
+                </div>
             </div>
         </div>
         <div class="panel panel-default">
@@ -191,6 +323,319 @@
                     <div class="col-md-9">
                         @Html.NopEditorFor(model => model.Link5)
                         @Html.ValidationMessageFor(model => model.Link5)
+                    </div>
+                </div>
+                @*For drop down*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Select5_OverrideForStore, model => model.Select5, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Select5)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopDropDownListFor(model => model.Select5, Model.SlideCategories, new { @disabled = "disabled" })
+                        @Html.ValidationMessageFor(model => model.Select5)
+                    </div>
+                </div>
+                @*For Heading*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Heading5_OverrideForStore, model => model.Heading5, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Heading5)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Heading5)
+                        @Html.ValidationMessageFor(model => model.Heading5)
+                    </div>
+                </div>
+                @*For Sub Heading*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.SubHeading5_OverrideForStore, model => model.SubHeading5, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.SubHeading5)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.SubHeading5)
+                        @Html.ValidationMessageFor(model => model.SubHeading5)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                @T("Plugins.Widgets.NivoSlider.Picture6")
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Picture6Id_OverrideForStore, model => model.Picture6Id, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Picture6Id)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Picture6Id)
+                        @Html.ValidationMessageFor(model => model.Picture6Id)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Text6_OverrideForStore, model => model.Text6, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Text6)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Text6)
+                        @Html.ValidationMessageFor(model => model.Text6)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Link6_OverrideForStore, model => model.Link6, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Link6)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Link6)
+                        @Html.ValidationMessageFor(model => model.Link6)
+                    </div>
+                </div>
+                @*For drop down*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Select6_OverrideForStore, model => model.Select6, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Select6)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopDropDownListFor(model => model.Select6, Model.SlideCategories, new { @disabled = "disabled" })
+                        @Html.ValidationMessageFor(model => model.Select6)
+                    </div>
+                </div>
+                @*For Heading*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Heading6_OverrideForStore, model => model.Heading6, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Heading6)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Heading6)
+                        @Html.ValidationMessageFor(model => model.Heading6)
+                    </div>
+                </div>
+                @*For Sub Heading*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.SubHeading6_OverrideForStore, model => model.SubHeading6, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.SubHeading6)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.SubHeading6)
+                        @Html.ValidationMessageFor(model => model.SubHeading6)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                @T("Plugins.Widgets.NivoSlider.Picture7")
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Picture7Id_OverrideForStore, model => model.Picture7Id, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Picture7Id)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Picture7Id)
+                        @Html.ValidationMessageFor(model => model.Picture7Id)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Text7_OverrideForStore, model => model.Text7, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Text7)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Text7)
+                        @Html.ValidationMessageFor(model => model.Text7)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Link7_OverrideForStore, model => model.Link7, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Link7)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Link7)
+                        @Html.ValidationMessageFor(model => model.Link7)
+                    </div>
+                </div>
+                @*For drop down*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Select7_OverrideForStore, model => model.Select7, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Select7)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopDropDownListFor(model => model.Select7, Model.SlideCategories, new { @disabled = "disabled" })
+                        @Html.ValidationMessageFor(model => model.Select7)
+                    </div>
+                </div>
+                @*For Heading*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Heading7_OverrideForStore, model => model.Heading7, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Heading7)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Heading7)
+                        @Html.ValidationMessageFor(model => model.Heading7)
+                    </div>
+                </div>
+                @*For Sub Heading*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.SubHeading7_OverrideForStore, model => model.SubHeading7, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.SubHeading7)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.SubHeading7)
+                        @Html.ValidationMessageFor(model => model.SubHeading7)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                @T("Plugins.Widgets.NivoSlider.Picture8")
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Picture8Id_OverrideForStore, model => model.Picture8Id, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Picture8Id)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Picture8Id)
+                        @Html.ValidationMessageFor(model => model.Picture8Id)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Text8_OverrideForStore, model => model.Text8, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Text8)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Text8)
+                        @Html.ValidationMessageFor(model => model.Text8)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Link8_OverrideForStore, model => model.Link8, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Link8)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Link8)
+                        @Html.ValidationMessageFor(model => model.Link8)
+                    </div>
+                </div>
+                @*For drop down*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Select8_OverrideForStore, model => model.Select8, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Select8)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopDropDownListFor(model => model.Select8, Model.SlideCategories, new { @disabled = "disabled" })
+                        @Html.ValidationMessageFor(model => model.Select8)
+                    </div>
+                </div>
+                @*For Heading*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Heading8_OverrideForStore, model => model.Heading8, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Heading8)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Heading8)
+                        @Html.ValidationMessageFor(model => model.Heading8)
+                    </div>
+                </div>
+                @*For Sub Heading*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.SubHeading8_OverrideForStore, model => model.SubHeading8, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.SubHeading8)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.SubHeading8)
+                        @Html.ValidationMessageFor(model => model.SubHeading8)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                @T("Plugins.Widgets.NivoSlider.Picture9")
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Picture9Id_OverrideForStore, model => model.Picture9Id, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Picture9Id)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Picture9Id)
+                        @Html.ValidationMessageFor(model => model.Picture9Id)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Text9_OverrideForStore, model => model.Text9, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Text9)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Text9)
+                        @Html.ValidationMessageFor(model => model.Text9)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Link9_OverrideForStore, model => model.Link9, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Link9)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Link9)
+                        @Html.ValidationMessageFor(model => model.Link9)
+                    </div>
+                </div>
+                @*For drop down*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Select9_OverrideForStore, model => model.Select9, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Select9)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopDropDownListFor(model => model.Select9, Model.SlideCategories, new { @disabled = "disabled" })
+                        @Html.ValidationMessageFor(model => model.Select9)
+                    </div>
+                </div>
+                @*For Heading*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.Heading9_OverrideForStore, model => model.Heading9, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.Heading9)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.Heading9)
+                        @Html.ValidationMessageFor(model => model.Heading9)
+                    </div>
+                </div>
+                @*For Sub Heading*@
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.OverrideStoreCheckboxFor(model => model.SubHeading9_OverrideForStore, model => model.SubHeading9, Model.ActiveStoreScopeConfiguration)
+                        @Html.NopLabelFor(model => model.SubHeading9)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.SubHeading9)
+                        @Html.ValidationMessageFor(model => model.SubHeading9)
                     </div>
                 </div>
             </div>

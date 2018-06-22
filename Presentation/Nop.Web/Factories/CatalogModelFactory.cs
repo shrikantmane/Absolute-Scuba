@@ -1283,6 +1283,7 @@ namespace Nop.Web.Factories
                 }
                 return categoriesModel;
             });
+
             if (categories.Any())
             {
                 //first empty entry

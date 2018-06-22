@@ -1043,6 +1043,7 @@
     <Content Include="Themes\StrivingBlueTheme\preview.jpg" />
     <Content Include="Themes\StrivingBlueTheme\Scripts\bootstrap.min.js" />
     <Content Include="Themes\StrivingBlueTheme\Scripts\jquery.js" />
+    <Content Include="Themes\StrivingBlueTheme\Scripts\jzoom.min.js" />
     <Content Include="Themes\StrivingBlueTheme\Scripts\main.js" />
     <Content Include="Themes\StrivingBlueTheme\Scripts\nice-scroll.js" />
     <Content Include="Themes\StrivingBlueTheme\Scripts\swiper.js" />
@@ -1336,6 +1337,7 @@
     <Content Include="Themes\StrivingBlueTheme\Views\Product\ProductDetailReviews.cshtml">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="Themes\StrivingBlueTheme\Views\Catalog\CustomSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Plugins\bin\" />
